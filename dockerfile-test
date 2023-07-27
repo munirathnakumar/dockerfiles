@@ -1,0 +1,36 @@
+FROM openjdk:11
+
+# Create a directory for the talend model
+RUN mkdir -p /talend/talendmodel
+
+# Create a directory for the config file
+RUN mkdir -p /talend/talendmodel/config
+
+# Copy the talend model to the Docker image
+COPY talend/talendmodel/* /talend/talendmodel/
+
+# Copy the default.properties file to the Docker image
+COPY default.properties /talend/talendmodel/config/default.properties
+
+# Copy the input.csv file to the Docker image
+COPY input.csv /talend/talendmodel/
+
+# Copy the run.sh script to the Docker image
+COPY run.sh /talend/talendmodel/
+
+# Set the working directory to the talend model
+WORKDIR /talend/talendmodel
+
+# Replace the values of the keys `name` and `place` in the file `default.properties` with the values passed as parameters
+# when running the Docker container
+RUN sed -i "s/name=.*/name=$1/g" /talend/talendmodel/config/default.properties
+RUN sed -i "s/place=.*/place=$2/g" /talend/talendmodel/config/default.properties
+
+# Copy the input file passed as a parameter to the Docker container to the `talend/talendmodel/` directory
+RUN cp $3 /talend/talendmodel/input.csv
+
+# Run the run.sh script
+CMD ["sh run.sh"]
+
+# Copy the output file from the Docker container to the local directory
+CMD ["cp", "/talend/talendmodel/output.xls", "/tmp/output.xls"]
