@@ -171,3 +171,86 @@ The ATMS envisions:
    **Description**: Built on a modular architecture, the system should allow for the addition of new functionalities or integrations without disrupting existing features.
 
 ---
+
+
+Certainly. I'll provide an in-depth breakdown of the given Functional and Non-functional Requirements.
+
+---
+
+### **Functional Requirements (FR)**
+
+1. **FR1: Threat Discovery**  
+   **Description**: The ATMS should automatically recognize and catalog an expansive range of potential and known threat vectors across various environments.
+   - **Detail**: This includes a wide spectrum of threats, from common vulnerabilities to Zero-Day threats across network layers, application layers, and even third-party integrations.
+
+2. **FR2: Application Compatibility**  
+   **Description**: The ATMS should support threat modeling across diverse application types.
+   - **Detail**: This includes web apps, mobile apps, microservices, cloud-native applications, IoT devices, and others. It should also recognize language-specific vulnerabilities and platform-specific threats.
+
+3. **FR3: Diagram Parsing**  
+   **Description**: The system should interpret various application and system diagrams to extract meaningful architecture and flow data.
+   - **Detail**: Support for popular file formats (e.g., .visio, .drawio) and the capability to decipher nested architectures, network configurations, and data flow.
+
+4. **FR4: Threat Categorization**  
+   **Description**: Upon detection, threats should be systematically organized based on different predefined parameters.
+   - **Detail**: Categorization can be based on type (e.g., XSS, CSRF, SQL Injection), severity (critical, high, medium, low), potential impact (data loss, service disruption), or the layer they affect (network, application, data).
+
+5. **FR5: Threat Assessment**  
+   **Description**: Evaluate each identified threat in terms of its potential impact and likelihood of exploitation.
+   - **Detail**: Utilize scoring mechanisms such as CVSS to determine severity, exploitability, and damage potential. Consider external factors like current threat landscape and known active exploits.
+
+6. **FR6: Reporting**  
+   **Description**: Generate detailed, actionable, and easy-to-interpret reports on the identified threats.
+   - **Detail**: Reports should be tailored for different stakeholders, from technical teams to executive leadership, highlighting potential impacts, hotspots, and remediation strategies.
+
+7. **FR7: Integration**  
+   **Description**: Seamless connectivity with external threat intelligence platforms and other security tools.
+   - **Detail**: Automated pull of new threat data, integration with vulnerability management platforms, SIEMs, and other security solutions to have a unified view of the threat landscape.
+
+8. **FR8: Mitigation Proposals**  
+   **Description**: Recommend countermeasures for detected threats.
+   - **Detail**: Suggestions should be based on best practices, known effective strategies, and aligned with the specific technology or platform in question. Integrations with frameworks like MITRE ATT&CK can provide contextually relevant mitigations.
+
+9. **FR9: CI/CD Embedment**  
+   **Description**: Integrate with continuous integration/continuous deployment pipelines.
+   - **Detail**: Real-time threat modeling during software builds and deployments, allowing development teams to address threats before they reach production environments.
+
+10. **FR10: Regulatory Alignment**  
+    **Description**: Align threat modeling and assessments with global security standards and regulations.
+   - **Detail**: Integration with standards like GDPR, HIPAA, PCI DSS, and others to ensure compliance checks are met and verified against benchmarks.
+
+11. **FR11: User Management and Access Control**  
+    **Description**: Implement a robust user management system, ensuring system integrity and restricted access based on roles.
+   - **Detail**: Features like Role-Based Access Control (RBAC), multi-factor authentication, audit trails for user actions, and granular permissions for different functionalities.
+
+---
+
+### **Non-functional Requirements (NFR)**
+
+1. **NFR1: Scalable Design**  
+   **Description**: The ATMS should handle growth and accommodate increasing loads without a drop in performance.
+   - **Detail**: Whether it's integrating more applications, ingesting larger threat databases, or scaling horizontally across multiple servers, the system should remain responsive.
+
+2. **NFR2: Security**  
+   **Description**: Security should be inherent to every facet of the ATMS.
+   - **Detail**: Regular penetration testing, encrypted data at rest and in transit, and proactive vulnerability management should be in place to protect system integrity.
+
+3. **NFR3: Reliability**  
+   **Description**: Consistent availability and fault tolerance.
+   - **Detail**: Redundancies in place to avoid single points of failure, timely backups, and an effective disaster recovery plan to ensure data integrity and system uptime.
+
+4. **NFR4: Intuitive UI/UX**  
+   **Description**: User interface and experience tailored to the unique requirements of threat modeling.
+   - **Detail**: Clear visualizations, easy navigation, well-documented help sections, and a design that caters to both novice and expert users.
+
+5. **NFR5: Performance**  
+   **Description**: Efficient response times and swift operations.
+   - **Detail**: Whether it's threat analysis, report generation, or real-time modeling in CI/CD pipelines, the system should deliver results with minimal latency.
+
+6. **NFR6: Modular Scalability**  
+   **Description**: The system should allow for component-based scalability.
+   - **Detail**: Add new features or integrations as modules, ensuring that existing functionalities aren't disrupted and allowing for customized scaling based on organizational needs.
+
+---
+
+These detailed descriptions provide an in-depth view of the functionalities and characteristics expected from the Automated Threat Modeling System.
