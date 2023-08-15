@@ -254,3 +254,77 @@ Certainly. I'll provide an in-depth breakdown of the given Functional and Non-fu
 ---
 
 These detailed descriptions provide an in-depth view of the functionalities and characteristics expected from the Automated Threat Modeling System.
+
+SMET
+
+**Slide 1: Title slide**
+
+* Title: SMET: Semantic Mapping of CVE to ATT&CK
+* Subtitle: A Tool for Improving Cybersecurity
+
+**Slide 2: Introduction**
+
+* What is SMET?
+    * A tool that automatically maps Common Vulnerabilities and Exposures (CVEs) to MITRE ATT&CK techniques.
+    * ATT&CK is a framework that describes the tactics, techniques, and procedures (TTPs) used by adversaries to exploit vulnerabilities.
+    * CVEs are identifiers for publicly known security vulnerabilities.
+* Why is SMET important?
+    * CVEs are often difficult to understand and interpret.
+    * ATT&CK techniques provide a more detailed understanding of how vulnerabilities can be exploited.
+    * SMET can help security analysts to map CVEs to ATT&CK techniques, which can improve their understanding of vulnerabilities and help them to identify appropriate countermeasures.
+
+**Slide 3: How SMET works**
+
+* SMET works by first extracting the attack vectors from the CVE description.
+* An attack vector is a textual description of a malicious action that an attacker can perform.
+* SMET then uses a semantic role labeling (SRL) model to identify the semantic roles of the entities in the attack vector.
+* An SRL model is a machine learning model that can identify the relationships between entities in a sentence.
+* Finally, SMET uses a technique called word embedding to create a vector representation of the attack vector.
+* Word embedding is a process of converting words into vectors that capture their semantic meaning.
+* The vector representation of the attack vector is then compared to the vector representations of the ATT&CK techniques to find the closest match.
+
+**Slide 4: Benefits of using SMET**
+
+* Improves understanding of vulnerabilities
+* Helps identify appropriate countermeasures
+* Automates the mapping of CVEs to ATT&CK techniques
+* Improves the accuracy of vulnerability scanning tools
+* Develops training materials for security analysts
+
+**Slide 5: Limitations of SMET**
+
+* Still under development
+* Can be computationally expensive
+* Requires a large amount of training data
+* Accuracy can be affected by the quality of the CVE descriptions
+
+**Slide 6: Accuracy of SMET**
+
+* In a study, SMET was able to map 92% of the CVEs to the correct ATT&CK technique.
+* However, the accuracy of SMET can be affected by the quality of the CVE descriptions.
+* For example, if the CVE description is not clear or concise, SMET may not be able to map it to the correct ATT&CK technique.
+
+**Slide 7: SMET and other security tools**
+
+* SMET is not a silver bullet and should be used in conjunction with other security tools.
+* Other security tools that can be used with SMET include:
+    * Vulnerability scanning tools
+    * Intrusion detection systems
+    * Security information and event management (SIEM) systems
+
+**Slide 8: SMET and other frameworks**
+
+* SMET can be used to map CVEs to other frameworks, such as the Common Attack Pattern Enumeration and Classification (CAPEC) framework.
+* CAPEC is a framework that describes attack patterns that can be used by adversaries to exploit vulnerabilities.
+
+**Slide 9: Future of SMET**
+
+* SMET is still under development, but it has the potential to be a valuable tool for the cybersecurity community.
+* Future work on SMET could focus on improving the accuracy of the tool, reducing the computational cost, and expanding the coverage of the tool to include more CVEs.
+
+**Slide 10: Conclusion**
+
+* SMET is a promising tool that can help security analysts to improve their understanding of vulnerabilities and to identify appropriate countermeasures.
+* SMET is still under development, but it has the potential to be a valuable tool for the cybersecurity community.
+
+I hope this presentation is more detailed and informative. Let me know if you have any other questions.
