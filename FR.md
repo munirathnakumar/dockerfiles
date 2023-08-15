@@ -502,3 +502,36 @@ CVE description: A remote code execution vulnerability exists in the Windows Pri
 
 
 I hope this is more helpful!
+
+
+
+
+Sure, here is a presentation on how logical regression can be used to do attack mapping in the context of SMET:
+
+## Logical Regression for Attack Mapping in SMET
+
+* **Logical regression:** A statistical model that can be used to predict the probability of an event occurring based on a set of known factors.
+* **Attack mapping:** The process of identifying the ATT&CK techniques that are associated with a particular CVE description.
+* **SMET:** A tool that can be used to automatically identify ATT&CK techniques in CVE descriptions.
+
+Here are the steps involved in using logical regression to do attack mapping in SMET:
+
+1. **Collect a dataset of CVE descriptions and ATT&CK techniques.** This dataset can be created by manually pairing CVE descriptions with ATT&CK techniques, or by using a tool like SMET to automatically identify ATT&CK techniques in CVE descriptions.
+2. **Train a logical regression model on the dataset.** The model will learn to predict the probability of a CVE description being associated with a particular ATT&CK technique based on the factors that are present in the CVE description.
+3. **Use the model to predict the ATT&CK techniques that are associated with new CVE descriptions.** This can be done by passing the new CVE descriptions to the model and seeing which ATT&CK techniques have the highest predicted probability.
+
+
+Here are some of the benefits of using logical regression for attack mapping in SMET:
+
+* **Simple and easy to understand:** Logical regression is a relatively simple model that is easy to understand and interpret. This makes it a good choice for organizations that are new to attack mapping or that do not have a lot of data scientists on staff.
+* **Efficient:** Logical regression is a relatively efficient model, which makes it scalable to large datasets. This is important for organizations that have a large number of CVE descriptions to map.
+* **Robust to noisy data:** Logical regression is relatively robust to noisy data. This means that it can still produce accurate predictions even if the CVE descriptions are not perfect.
+
+
+Here are some of the limitations of using logical regression for attack mapping in SMET:
+
+* **Not as accurate as other models:** Logical regression is not as accurate as some other machine learning models, such as neural networks. This is because it is a simpler model that does not take into account as many factors.
+* **Not as good at handling complex relationships:** Logical regression is not as good at handling complex relationships between factors. This can be a problem for CVE descriptions that contain multiple factors that contribute to the attack.
+
+
+Overall, logical regression is a good choice for attack mapping in SMET when accuracy is not the most important factor. It is a simple, efficient, and robust model that can be used to predict the ATT&CK techniques that are associated with new CVE descriptions.
