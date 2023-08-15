@@ -374,3 +374,19 @@ SMET can be used to improve cybersecurity in a variety of ways, including:
 **Conclusion**
 
 SMET is a promising new approach to semantic mapping of CVE to ATT&CK. SMET is accurate, efficient, and scalable, making it a valuable tool for improving cybersecurity.
+
+
+
+Preprocessing: The first step in SRL is to preprocess the text. This involves removing stop words, punctuation, and other noise from the text. This can be done using a variety of tools, such as the Natural Language Toolkit (NLTK) in Python.
+Tokenization: The next step is to tokenize the text, which means breaking it down into individual words or phrases. This can be done using a variety of tools, such as the NLTK word_tokenize() function.
+Dependency parsing: The third step is to perform dependency parsing on the text. This involves identifying the syntactic relationships between the words in the text. This can be done using a variety of tools, such as the Stanford CoreNLP parser.
+Semantic role labeling: The fourth and final step is to perform semantic role labeling on the text. This involves assigning a semantic role to each word in the text. The semantic roles that are used in SRL are typically defined in a lexicon or a knowledge base.
+The following are some of the most common semantic roles that are used in SRL:
+
+Agent: The entity that performs the action.
+Action: The action that is performed.
+Object: The entity that is affected by the action.
+Recipient: The entity that receives the action.
+Instrument: The tool or object that is used to perform the action.
+Location: The place where the action takes place.
+Time: The time when the action takes place.
