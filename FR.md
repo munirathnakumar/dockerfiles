@@ -413,3 +413,92 @@ The following are some of the most common semantic roles that are used in SRL:
 The semantic roles that are assigned to the words in the text are used to represent the meaning of the sentence. This representation can then be used for a variety of tasks, such as machine translation, question answering, and natural language inference.
 
 I hope this explanation is helpful! Let me know if you have any other questions.
+
+
+
+
+
+Sure, here are the semantic role labeling (SRL) steps in the context of SMET (Semantic Mapping of CVE to ATT&CK) in more details:
+
+1. **Preprocessing:** The first step is to preprocess the CVE description. This involves removing stop words, punctuation, and other noise from the text.
+2. **Tokenization:** The next step is to tokenize the text, which means breaking it down into individual words or phrases.
+3. **Named entity recognition:** The third step is to perform named entity recognition (NER) on the tokens. This involves identifying the named entities in the text, such as people, organizations, and locations.
+4. **Coreference resolution:** The fourth step is to perform coreference resolution on the tokens. This involves identifying the references to the same entity in the text.
+5. **SRL tagging:** The fifth and final step is to perform SRL tagging on the tokens. This involves assigning a semantic role to each token. The semantic roles that are used in SMET are:
+
+    * **Agent:** The entity that performs the action.
+    * **Action:** The action that is performed.
+    * **Object:** The entity that is affected by the action.
+
+The SRL tagging step is the most important step in the SMET approach. It allows SMET to identify the important semantic roles in the text, and it allows SMET to generate a concise and accurate representation of the attack.
+
+The following is an example of how SRL tagging can be used to extract an attack vector from a CVE description:
+
+**CVE description:** A remote code execution vulnerability exists in the Windows Print Spooler service due to improper handling of specially crafted Print Spooler requests. An attacker could exploit this vulnerability to execute arbitrary code on the target system.
+
+**SRL tagging:**
+
+    * Agent: attacker
+    * Action: exploit
+    * Object: vulnerability
+
+The SRL tagging step identifies the following semantic roles in the CVE description:
+
+    * Agent: The attacker is the entity that performs the action.
+    * Action: The action is to exploit the vulnerability.
+    * Object: The object is the vulnerability.
+
+The attacker, action, and object semantic roles can be combined to form an attack vector:
+
+**Attack vector:** attacker exploits vulnerability
+
+The attack vector captures the essence of the attack in a concise and accurate way. It can be used to predict the ATT&CK technique with high accuracy.
+
+I hope this explanation is helpful!
+
+
+
+
+
+
+Sure, here is a presentation on the semantic role labeling steps in the context of SMET (Semantic Mapping of CVE to ATT&CK) in the form of a deck:
+
+
+## Semantic Role Labeling in SMET
+
+* **Preprocessing:**
+    * Remove stop words, punctuation, and other noise from the text.
+    * This is important because stop words do not add any meaning to the text and can actually make it more difficult to extract the semantic roles.
+* **Tokenization:**
+    * Break the text down into individual words or phrases.
+    * This is important because the SRL tagging algorithm needs to be able to identify the individual words and phrases in the text in order to assign the correct semantic roles.
+* **Named entity recognition:**
+    * Identify named entities in the text, such as people, organizations, and locations.
+    * This is important because the SRL tagging algorithm needs to be able to identify the named entities in the text in order to assign the correct semantic roles.
+* **Coreference resolution:**
+    * Identify the references to the same entity in the text.
+    * This is important because the SRL tagging algorithm needs to be able to identify the references to the same entity in the text in order to assign the correct semantic roles.
+* **SRL tagging:**
+    * Assign a semantic role to each token.
+    * This is the most important step because it is the step that extracts the semantic roles from the text.
+
+**Example:**
+
+CVE description: A remote code execution vulnerability exists in the Windows Print Spooler service due to improper handling of specially crafted Print Spooler requests. An attacker could exploit this vulnerability to execute arbitrary code on the target system.
+
+**SRL tagging:**
+
+    * **Agent:** The attacker is the entity that performs the action.
+    * **Action:** The action is to exploit the vulnerability.
+    * **Object:** The object is the vulnerability.
+
+**Attack vector:** attacker exploits vulnerability
+
+**Conclusion:**
+
+* Semantic role labeling is an important step in the SMET approach to semantic mapping of CVE to ATT&CK.
+* It allows SMET to identify the important semantic roles in the text, and it allows SMET to generate a concise and accurate representation of the attack.
+* The attack vector can be used to predict the ATT&CK technique with high accuracy.
+
+
+I hope this is more helpful!
