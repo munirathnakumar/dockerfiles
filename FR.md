@@ -328,3 +328,49 @@ SMET
 * SMET is still under development, but it has the potential to be a valuable tool for the cybersecurity community.
 
 I hope this presentation is more detailed and informative. Let me know if you have any other questions.
+
+
+
+
+Sure, here is an overview of SMET (Semantic Mapping of CVE to ATT&CK) with SRL (Semantic Role Labeling), Attack BERT, and Logical Regression:
+
+**SMET**
+
+SMET is a novel unsupervised machine learning approach to semantic mapping of CVE to ATT&CK. SMET was developed by researchers at the University of Pittsburgh and the University of Maryland, College Park.
+
+**SRL**
+
+SRL is a natural language processing technique that can be used to extract the semantic roles of words and phrases in a sentence. In the context of SMET, SRL is used to extract the attack vectors from the CVE description. An attack vector is a textual description of a malicious action that an attacker can perform. Some examples of attack vectors include “exploit a vulnerability to gain access to a network,” “execute code on a victim machine,” or “send data to a C2 server.”
+
+**Attack BERT**
+
+Attack BERT is a BERT model that has been fine-tuned on a dataset of attack vectors. This means that Attack BERT has learned to identify the important features of attack vectors and to generate embeddings that are more relevant to the task of semantic mapping of CVE to ATT&CK.
+
+**Logical Regression**
+
+Logical regression is a machine learning algorithm that can be used to predict a categorical variable based on a set of features. In the context of SMET, logical regression can be used to predict the ATT&CK technique that is associated with a given CVE.
+
+**How SMET works**
+
+SMET works by first using SRL to extract the attack vectors from the CVE description. Then, SMET uses Attack BERT to generate embeddings for the attack vectors. These embeddings are then used as features in a logical regression model to predict the ATT&CK technique.
+
+**Advantages of SMET**
+
+SMET has several advantages over other approaches to semantic mapping of CVE to ATT&CK, including:
+
+* It does not require a manually annotated dataset, which makes it more scalable and adaptable to new CVEs and ATT&CK techniques.
+* It is more accurate than previous approaches, achieving an accuracy of 90%.
+* It is more efficient, taking only a few milliseconds to map a CVE to ATT&CK techniques.
+
+**Applications of SMET**
+
+SMET can be used to improve cybersecurity in a variety of ways, including:
+
+* Helping security teams to understand the risks posed by vulnerabilities.
+* Prioritizing vulnerability remediation efforts.
+* Developing effective mitigation strategies.
+* Automating the process of vulnerability management.
+
+**Conclusion**
+
+SMET is a promising new approach to semantic mapping of CVE to ATT&CK. SMET is accurate, efficient, and scalable, making it a valuable tool for improving cybersecurity.
