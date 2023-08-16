@@ -545,3 +545,11 @@ SMET is a tool that can be used to automatically map CVE descriptions to ATT&CK 
 ATT&CK is a framework that describes the tactics, techniques, and procedures (TTPs) that attackers use to compromise systems.
 SMET can be used to help organizations understand the security risks posed by CVEs and to prioritize their remediation efforts.
 How SMET works: SMET first uses a semantic role labeling (SRL) model to extract the semantic roles of words and phrases in a CVE description. Then, SMET uses a machine learning model to map the semantic roles to ATT&CK techniques. The machine learning model is trained on a dataset of CVE descriptions and ATT&CK techniques.
+
+
+
+
+Step 1: Semantic role labeling (SRL): SRL is the process of identifying the semantic roles of words and phrases in a sentence. The semantic roles of a sentence are the relationships between the words and phrases in the sentence. For example, in the sentence "The attacker exploited a vulnerability in the web server," the semantic roles are "agent" (the attacker), "action" (exploited), and "object" (the vulnerability).
+Step 2: Attack Bert: Attack Bert is a BERT-based model that has been fine-tuned on a dataset of CVE descriptions and ATT&CK techniques. BERT is a natural language processing model that has been shown to be very effective at understanding the meaning of words and phrases in a sentence. Attack Bert is a variant of BERT that has been fine-tuned on a dataset of CVE descriptions and ATT&CK techniques. This means that Attack Bert is specifically designed to understand the language used in CVE descriptions and ATT&CK techniques.
+Step 3: Machine learning: The machine learning model in SMET is trained on a dataset of CVE descriptions and ATT&CK techniques. The model learns to map the semantic roles of words and phrases in a CVE description to ATT&CK techniques. This means that the model can predict which ATT&CK techniques are likely to be used in an attack that is described by a particular CVE description.
+Step 4: Logical regression: Logical regression is a statistical model that can be used to predict the probability of a CVE description being associated with a particular ATT&CK technique. This means that logical regression can be used to predict the most likely ATT&CK techniques for a given CVE description.
