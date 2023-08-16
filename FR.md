@@ -535,3 +535,13 @@ Here are some of the limitations of using logical regression for attack mapping 
 
 
 Overall, logical regression is a good choice for attack mapping in SMET when accuracy is not the most important factor. It is a simple, efficient, and robust model that can be used to predict the ATT&CK techniques that are associated with new CVE descriptions.
+
+
+
+
+
+Introduction:
+SMET is a tool that can be used to automatically map CVE descriptions to ATT&CK techniques.
+ATT&CK is a framework that describes the tactics, techniques, and procedures (TTPs) that attackers use to compromise systems.
+SMET can be used to help organizations understand the security risks posed by CVEs and to prioritize their remediation efforts.
+How SMET works: SMET first uses a semantic role labeling (SRL) model to extract the semantic roles of words and phrases in a CVE description. Then, SMET uses a machine learning model to map the semantic roles to ATT&CK techniques. The machine learning model is trained on a dataset of CVE descriptions and ATT&CK techniques.
