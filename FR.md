@@ -553,3 +553,56 @@ Step 1: Semantic role labeling (SRL): SRL is the process of identifying the sema
 Step 2: Attack Bert: Attack Bert is a BERT-based model that has been fine-tuned on a dataset of CVE descriptions and ATT&CK techniques. BERT is a natural language processing model that has been shown to be very effective at understanding the meaning of words and phrases in a sentence. Attack Bert is a variant of BERT that has been fine-tuned on a dataset of CVE descriptions and ATT&CK techniques. This means that Attack Bert is specifically designed to understand the language used in CVE descriptions and ATT&CK techniques.
 Step 3: Machine learning: The machine learning model in SMET is trained on a dataset of CVE descriptions and ATT&CK techniques. The model learns to map the semantic roles of words and phrases in a CVE description to ATT&CK techniques. This means that the model can predict which ATT&CK techniques are likely to be used in an attack that is described by a particular CVE description.
 Step 4: Logical regression: Logical regression is a statistical model that can be used to predict the probability of a CVE description being associated with a particular ATT&CK technique. This means that logical regression can be used to predict the most likely ATT&CK techniques for a given CVE description.
+
+
+
+Sure, here is a final speaker notes that combines the previous two contents and includes an example:
+
+**Semantic role labeling (SRL) in the context of SMET**
+
+SRL is a natural language processing technique that identifies the semantic roles of the words and phrases in a sentence. In the context of SMET, SRL can be used to identify the semantic roles of the words and phrases in a CVE description. This information can then be used to extract ATT&CK vectors from the CVE description.
+
+**An ATT&CK vector** is a description of how an attacker can exploit a vulnerability to gain access to a system.
+
+To extract ATT&CK vectors from a CVE description using SRL, we can follow these steps:
+
+1. **Pre-processing:** The first step is to perform pre-processing on the CVE description. This includes tasks such as tokenization, part-of-speech tagging, named entity recognition, and coreference resolution.
+2. **Semantic role labeling:** The second step is to perform semantic role labeling on the pre-processed CVE description. This involves identifying the semantic roles of the words and phrases in the CVE description.
+3. **Extracting ATT&CK vectors:** The third step is to extract ATT&CK vectors from the semantic roles of the CVE description. This can be done by looking for patterns in the semantic roles that match known ATT&CK vectors.
+
+**Example:**
+
+The following is an example of how SRL can be used to extract ATT&CK vectors from a CVE description:
+
+* **CVE Description:**
+
+> The attacker exploited a vulnerability in the web server to gain access to the system.
+
+* **Pre-processing:**
+
+The pre-processing steps would first tokenize the CVE description, part-of-speech tag the tokens, identify named entities, and resolve coreferences. This would result in the following:
+
+    * The
+    * attacker
+    * exploited
+    * a
+    * vulnerability
+    * in
+    * the
+    * web
+    * server
+    * to
+    * gain
+    * access
+    * to
+    * the
+    * system
+
+* **Semantic role labeling:**
+
+The semantic role labeling step would then assign semantic roles to the words and phrases in the CVE description. This would result in the following:
+
+    * **Agent:** The attacker
+    * **Action:** Exploited
+    * **Object:** The vulnerability
+
