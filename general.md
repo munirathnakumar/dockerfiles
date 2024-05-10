@@ -524,5 +524,55 @@ This task provides a comprehensive opportunity for candidates to demonstrate the
 
 
 
+Got it. Let's revise the task to trigger the pipeline upon approving a pull request:
+
+---
+
+**Task 3: Integration of DevSecOps Scanning Processes**
+
+You are tasked with integrating various DevSecOps security scanning processes into the CI/CD pipeline for a three-tier application deployment. You will utilize the provided three-tier application source code available at https://github.com/WebGoat/WebGoat. Your objective is to ensure the security of both the Terraform infrastructure code and the deployed application code by identifying vulnerabilities, misconfigurations, and other security issues.
+
+**Requirements:**
+
+1. **Source Code and Pipeline Integration:**
+   - Fork or clone the provided three-tier application source code repository from https://github.com/WebGoat/WebGoat.
+   - Set up a CI/CD pipeline using a service like AWS CodePipeline, Azure DevOps, or any other CI/CD tool of your choice.
+   - Integrate the three-tier application source code repository into the CI/CD pipeline.
+
+2. **DevSecOps Scanning Processes:**
+   - Implement the following security scanning processes into the CI/CD pipeline:
+     - Static Application Security Testing (SAST): Analyze the application source code for security vulnerabilities and coding best practices.
+     - Dependency Checking: Scan for any vulnerable dependencies or libraries used in the application.
+     - Password Scanning: Check the source code and Terraform scripts for hardcoded passwords or sensitive information.
+     - Container Scanning (if applicable): Analyze Docker container images for known vulnerabilities.
+   - Utilize any open-source scanning tools of your choice to perform these security scans.
+
+3. **Pipeline Configuration:**
+   - Configure the CI/CD pipeline to trigger upon approving a pull request in the source code repository.
+   - Ensure that the pipeline is structured in a way that the build process halts in case of any high-severity vulnerability findings.
+
+4. **Scan Report Management:**
+   - Configure the CI/CD pipeline to generate detailed scan reports for each security scanning process.
+   - Ensure that all scan reports are easily accessible and well-documented.
+   - Store the scan reports in a designated directory within the application source code repository.
+
+**Deliverables:**
+- Updated CI/CD pipeline configuration integrating the three-tier application source code and DevSecOps scanning processes.
+- Documentation outlining the setup instructions, including details on integrated security scanning processes and how to access and interpret scan reports.
+
+**Additional Information:**
+- The goal is to automate security scanning processes to ensure the security of both the application code and the underlying infrastructure.
+- Utilize any open-source scanning tools that you deem appropriate for the task.
+- Ensure that the CI/CD pipeline is robust and follows standard practices in CI/CD and DevSecOps.
+
+**Evaluation Criteria:**
+- Successful integration of the three-tier application source code into the CI/CD pipeline.
+- Implementation of effective DevSecOps scanning processes, including SAST, dependency checking, password scanning, and container scanning (if applicable).
+- Proper configuration of the pipeline to trigger upon approving a pull request.
+- Compliance with security best practices and adherence to DevSecOps principles.
+- Clarity and completeness of documentation, especially regarding setup instructions and scan report management.
+
+
+
 
 
