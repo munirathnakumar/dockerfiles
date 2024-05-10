@@ -356,3 +356,47 @@ mic
 send
 Gemini may display inaccurate info, including about people, so double-check its responses. Your privacy & Gemini AppsOpens in a new window
 
+
+
+
+Task Description: Setting up ELK Cluster with Terraform and CI/CD Pipeline
+
+You are tasked with setting up an ELK (Elasticsearch, Logstash, Kibana) cluster in either Azure or AWS using Terraform. Additionally, you need to automate the provisioning process through a CI/CD pipeline to ensure efficient deployment and scalability.
+
+Requirements:
+
+Infrastructure Setup with Terraform:
+Use Terraform to provision the following resources:
+Virtual Machines (EC2 instances on AWS or VMs on Azure) for each component of the ELK stack (Elasticsearch, Logstash, Kibana).
+Storage resources for Elasticsearch indices (e.g., EBS volumes on AWS or managed disks on Azure).
+Configure appropriate networking components such as security groups, virtual networks, and subnets.
+Ensure high availability and fault tolerance of the ELK cluster components.
+Utilize managed services where available (e.g., Azure Elasticsearch Service or AWS Elasticsearch Service) for Elasticsearch to simplify management.
+ELK Cluster Configuration:
+Set up Elasticsearch, Logstash, and Kibana on the provisioned virtual machines or managed services.
+Configure Elasticsearch for data indexing and searching.
+Implement Logstash for log ingestion and processing.
+Set up Kibana for log visualization and analysis.
+Ensure proper communication and integration between the ELK components.
+CI/CD Pipeline Setup:
+Utilize a CI/CD service such as Azure DevOps, AWS CodePipeline, or Jenkins.
+Configure the pipeline to trigger on changes to the Terraform configuration or application code.
+Automate the deployment of the ELK cluster infrastructure using Terraform.
+Integrate testing and validation steps in the pipeline to ensure the stability and reliability of the deployed infrastructure.
+Implement approval stages or manual gates for promoting changes to production environments.
+Documentation and Monitoring:
+Provide clear documentation detailing the Terraform configuration, CI/CD pipeline setup, and deployment process.
+Include instructions for monitoring and maintaining the ELK cluster, such as monitoring Elasticsearch indices, Logstash pipelines, and Kibana dashboards.
+Ensure proper logging and alerting mechanisms are in place to detect and respond to issues promptly.
+Deliverables:
+
+Terraform configuration files for provisioning ELK cluster infrastructure.
+Scripts or configuration files for setting up Elasticsearch, Logstash, and Kibana.
+Configuration for the CI/CD pipeline.
+Documentation detailing setup instructions, best practices, and monitoring guidelines.
+Additional Information:
+
+You may choose to deploy the ELK cluster components on virtual machines or utilize managed services provided by the cloud provider for Elasticsearch.
+Ensure that security best practices are followed, including proper access control, encryption, and network isolation.
+The goal is to demonstrate your ability to automate the provisioning of infrastructure and deployment of complex applications using Terraform and CI/CD practices in either Azure or AWS.
+
