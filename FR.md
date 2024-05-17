@@ -679,3 +679,49 @@ With this token, the attacker was able to perform actions and access resources w
 
 This narrative provides a clear and concise description of the attacker's activities, the methods used for reconnaissance, command line injection, and privilege escalation, and the recommended actions to mitigate such risks in the future.
 
+
+
+### Penetration Testing Report
+
+#### Findings: Unrestricted File Upload and Metadata Tampering in Azure Blob Storage
+
+- **Unrestricted File Upload**:
+  - The attacker, with access to Azure Blob Storage, can upload files of any type through both the web interface and Azure CLI.
+  - Commands executed for file upload:
+    ```sh
+    az storage blob upload --container-name <ContainerName> --file <FilePath> --name <BlobName>
+    ```
+  - There are no restrictions on file type extensions, allowing the upload of potentially harmful files, including malicious scripts.
+
+- **CRUD Operations on Blob Metadata**:
+  - The attacker can perform Create, Read, Update, and Delete (CRUD) operations on the metadata of blobs within the storage account.
+  - Commands executed for metadata operations:
+    - To set metadata:
+      ```sh
+      az storage blob metadata update --container-name <ContainerName> --name <BlobName> --metadata key1=value1 key2=value2
+      ```
+    - To get metadata:
+      ```sh
+      az storage blob metadata show --container-name <ContainerName> --name <BlobName>
+      ```
+  - The attacker can tamper with blob metadata, which can lead to misleading information or misuse of data.
+
+- **Lack of File Type Filtering and Scanning**:
+  - There is no filtering mechanism in place to restrict uploads based on file type extensions.
+  - Additionally, there is no file scanning to detect and prevent the upload of malicious content.
+  - This absence of security controls allows the attacker to upload scripts that could be executed to compromise the system or other users.
+
+- **Exposure of Sensitive Data**:
+  - The attacker can upload and store sensitive data, such as passwords, keys, and other confidential information, without any restrictions or encryption requirements.
+  - The lack of controls to restrict sensitive data upload increases the risk of data breaches and unauthorized access.
+
+#### Recommendations:
+
+- **Implement File Type Restrictions**: Introduce filtering to restrict the upload of potentially dangerous file types and extensions.
+- **Enable File Scanning**: Integrate antivirus and malware scanning tools to automatically scan uploaded files for malicious content.
+- **Restrict Metadata Operations**: Implement stricter controls and permissions for metadata CRUD operations to prevent unauthorized tampering.
+- **Sensitive Data Protection**: Enforce policies to restrict the upload of sensitive data, and ensure that any necessary sensitive information is encrypted and access-controlled.
+- **Monitoring and Logging**: Enable comprehensive logging of all upload activities and metadata operations, and set up alerts for suspicious activities.
+
+This narrative provides a detailed description of the attacker's ability to exploit the lack of security controls in Azure Blob Storage, perform unrestricted file uploads, tamper with metadata, and potentially expose sensitive data. The recommended actions aim to mitigate these risks and enhance the overall security of the Azure Blob Storage environment.
+
