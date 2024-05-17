@@ -645,3 +645,37 @@ Privilege Escalation:
 The attacker successfully escalated privileges by leveraging the managed identity token.
 With this token, the attacker was able to perform actions and access resources with the permissions associated with the managed identity, potentially leading to further compromise within the Azure environment.
 
+
+
+### Penetration Testing Report
+
+#### Findings: Command Line Injection, Reconnaissance, and Privilege Escalation via Azure CLI
+
+- **Discovery of VM Scale Set**:
+  - The attacker utilized the Azure CLI to enumerate resources within the subscription.
+  - Command executed: `az vmss list --output table`
+  - This allowed the attacker to identify the presence and details of a Virtual Machine Scale Set (VMSS) deployed within the environment.
+
+- **Command Line Injection and Execution of Remote Shell with Elevated Privileges**:
+  - The attacker exploited a command line injection vulnerability to execute commands on a VM instance within the scale set.
+  - Command executed: `az vmss run-command invoke --resource-group <ResourceGroup> --name <ScaleSetName> --command-id RunShellScript --instance-id <InstanceID> --scripts "whoami"`
+  - This injection allowed the attacker to gain a remote shell with root privileges on the VM instance, indicating a severe escalation of privileges.
+
+- **Acquisition of Managed Identity Token**:
+  - The attacker proceeded to query the OAuth2 endpoint to obtain a managed identity token.
+  - Command executed (example using a curl request within the VM's shell): `curl 'http://localhost:50342/oauth2/token?resource=https://management.azure.com/&api-version=2019-08-01' -H Metadata:true`
+  - The token obtained was associated with the managed identity assigned to the VM, granting the attacker access to further Azure resources and services.
+
+- **Privilege Escalation**:
+  - The attacker successfully escalated privileges by leveraging the managed identity token.
+  - With this token, the attacker was able to perform actions and access resources with the permissions associated with the managed identity, potentially leading to further compromise within the Azure environment.
+
+#### Recommendations:
+
+- **Review and Restrict VMSS Permissions**: Ensure that VMSS instances have the minimum necessary permissions and are not over-privileged.
+- **Implement Proper Network Security Controls**: Use network security groups (NSGs) and other controls to limit access to VM instances.
+- **Monitor and Audit Managed Identities**: Regularly review managed identity permissions and monitor their use to detect anomalous activities.
+- **Enable Logging and Alerts**: Enable comprehensive logging and set up alerts for suspicious activities, such as unusual command executions or token requests.
+
+This narrative provides a clear and concise description of the attacker's activities, the methods used for reconnaissance, command line injection, and privilege escalation, and the recommended actions to mitigate such risks in the future.
+
